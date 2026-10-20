@@ -30,7 +30,7 @@ app.use('/api', filesByCodeRoutes);
 app.use('/', fileActionsRoutes);
 
 // Health check
-app.get('/api/health', (req, res) => {
+app.get(['/api/health', '/healthz'], (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
