@@ -1,16 +1,21 @@
 FROM node:20-alpine
 WORKDIR /app
 
-# Copy root and backend packages
+# Copy dependencies
 COPY package*.json ./
 COPY backend/package*.json ./backend/
 RUN cd backend && npm install --production
 
-# Copy application code (including pre-built frontend)
+# Copy application files
 COPY . .
 
-EXPOSE 3000
-ENV PORT=3000
+# Set permissions for non-root environments (Hugging Face Spaces, etc.)
+RUN chown -R 1000:1000 /app
+USER 1000
+
+# Default port (7860 for Hugging Face, or overridden by PORT environment variable)
+ENV PORT=7860
+EXPOSE 7860
 ENV NODE_ENV=production
 
 CMD ["node", "backend/server.js"]
