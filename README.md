@@ -1,3 +1,12 @@
+---
+title: FileDrop - Cross-Device File Sharing
+emoji: ⚡
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+---
+
 # ⚡ FileDrop - Cross-Device Personal File Sharing
 
 A lightweight, zero-login personal web app built for university students to quickly transfer files, documents, code snippets, notes, and pictures between phones, laptops, and lab PCs.
