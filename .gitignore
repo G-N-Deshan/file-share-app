@@ -12,8 +12,7 @@ backend/uploads/*
 .env
 .env.local
 
-# Build output
-frontend/dist/
+# Build output (tracked for zero-build cloud deployment)
 
 # OS and Editor files
 .DS_Store
