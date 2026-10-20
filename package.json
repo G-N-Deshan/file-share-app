@@ -1,0 +1,11 @@
+{
+  "name": "file-share-app",
+  "version": "1.0.0",
+  "description": "Cross-device personal file and codelines sharing web application",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev:backend": "cd backend && node server.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build"
+  }
+}
